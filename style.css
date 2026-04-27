@@ -1,0 +1,87 @@
+:root { 
+    --oro: #ffb300; 
+    --naranja: #ff6d00;
+    --fondo: #1a0f0d;
+    --texto: #ffffff;
+    --soga: #d7b57c; 
+}
+
+body { 
+    font-family: 'Oswald', sans-serif; 
+    background-color: var(--fondo);
+    background-image: radial-gradient(circle, #2c1a17 0%, #1a0f0d 100%);
+    margin: 0; padding-bottom: 100px; color: var(--texto); 
+    font-size: 1.3rem;
+}
+
+/* REDES SOCIALES EN EL HEADER */
+.redes-header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.redes-header a {
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: 0.3s;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--oro);
+}
+.redes-header a:hover { transform: scale(1.2); background: var(--naranja); }
+
+/* CUADROS DE ESCRITURA GIGANTES */
+input, select, textarea {
+    border: 7px solid var(--soga) !important;
+    border-radius: 20px;
+    padding: 22px !important;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 1.6rem !important;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+header { 
+    background: linear-gradient(135deg, var(--naranja), var(--oro));
+    padding: 60px 20px; text-align: center; 
+    border-bottom: 10px double var(--texto);
+}
+
+header h1 { font-family: 'Special Elite', cursive; font-size: 4.5rem; margin: 0; text-shadow: 4px 4px 0px rgba(0,0,0,0.3); }
+
+.btn-llanero { 
+    background: linear-gradient(to right, var(--naranja), var(--oro));
+    color: white; border: none; padding: 25px; font-size: 1.8rem; 
+    font-weight: bold; border-radius: 60px; cursor: pointer; 
+    width: 100%; text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.tabs-cliente { display: flex; overflow-x: auto; background: rgba(0,0,0,0.6); padding: 25px; gap: 20px; position: sticky; top: 0; z-index: 100; border-bottom: 4px solid var(--oro); }
+.tab-btn { background: transparent; color: var(--oro); border: 3px solid var(--oro); padding: 15px 35px; border-radius: 50px; cursor: pointer; font-weight: bold; font-size: 1.3rem; white-space: nowrap; }
+.tab-btn.active { background: var(--oro); color: #000; box-shadow: 0 0 25px var(--oro); }
+
+.grid-platos { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px; padding: 40px; }
+.card { background: #fff; color: #000; border: 8px solid var(--soga); border-radius: 25px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+.card img { width: 100%; height: 280px; object-fit: cover; border-bottom: 8px solid var(--soga); }
+.card-body { padding: 25px; text-align: center; }
+
+.modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
+.modal-content { background: #fff; border: 10px solid var(--soga) !important; border-radius: 40px; padding: 50px; color: #000; margin: 30px auto; max-width: 650px; }
+
+#cart-float { position: fixed; bottom: 30px; left: 30px; background: var(--oro); color: #000; padding: 30px; border-radius: 50%; border: 6px solid var(--soga); font-size: 2.5rem; z-index: 500; cursor: pointer; }
+#btn-admin-toggle { position: fixed; bottom: 30px; right: 30px; background: var(--naranja); color: white; padding: 25px 45px; border-radius: 70px; border: 5px solid var(--soga); font-size: 1.6rem; cursor: pointer; z-index: 500; font-weight: bold; }
+
+.nav-tab { flex: 1; padding: 20px; border: 4px solid var(--soga); background: #333; color: white; cursor: pointer; font-size: 1.3rem; font-weight: bold; }
+.nav-tab.active { background: var(--oro); color: #000; }
